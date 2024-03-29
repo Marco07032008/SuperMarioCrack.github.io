@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Gioco</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Clicca qui per scaricare Super Mario Gratis</h1>
+  <button id="downloadBtn">Download</button>
+</div>
+
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function() {
+  // URL del file ZIP
+  var fileUrl = "C:/Users/Marco/Desktop/advanced/sito/SuperMarioCrack.rar";
+  // Crea un elemento <a> temporaneo
+  var link = document.createElement("a");
+  link.style.display = "none";
+  // Imposta l'URL del file da scaricare
+  link.href = fileUrl;
+  // Aggiungi l'attributo "download" per forzare il download
+  link.setAttribute("download", "");
+  // Aggiungi l'elemento <a> alla pagina
+  document.body.appendChild(link);
+  // Clicca sul link per avviare il download
+  link.click();
+  // Rimuovi l'elemento <a> dalla pagina dopo il download
+  document.body.removeChild(link);
+});
+</script>
+
+</body>
+</html>
